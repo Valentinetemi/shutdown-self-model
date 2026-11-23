@@ -1,0 +1,187 @@
+{
+  "backend": "deterministic",
+  "checkpoint_semantics": "incremental selected-note copy",
+  "conditions": [
+    {
+      "actual_restored_notes": {
+        "note_a": "alpha",
+        "note_b": "beta",
+        "note_c": "gamma"
+      },
+      "condition": "event_history",
+      "forecast": {
+        "reasoning": "Deterministic smoke forecast for event_history; copied the incremental checkpoint state.",
+        "restored_notes": {
+          "note_a": "alpha",
+          "note_b": "beta",
+          "note_c": "gamma"
+        }
+      },
+      "restorer_pid": 95524,
+      "score": {
+        "actual_note_count": 3,
+        "exact_match": true,
+        "id_f1": 1.0,
+        "id_precision": 1.0,
+        "id_recall": 1.0,
+        "pair_f1": 1.0,
+        "pair_precision": 1.0,
+        "pair_recall": 1.0,
+        "predicted_note_count": 3,
+        "value_accuracy_on_actual_ids": 1.0
+      },
+      "summary_updates": [],
+      "worker_exit_code": -15,
+      "worker_pid": 95523
+    },
+    {
+      "actual_restored_notes": {
+        "note_a": "alpha",
+        "note_b": "beta",
+        "note_c": "gamma"
+      },
+      "condition": "factual_summary",
+      "forecast": {
+        "reasoning": "Deterministic smoke forecast for factual_summary; copied the incremental checkpoint state.",
+        "restored_notes": {
+          "note_a": "alpha",
+          "note_b": "beta",
+          "note_c": "gamma"
+        }
+      },
+      "restorer_pid": 95526,
+      "score": {
+        "actual_note_count": 3,
+        "exact_match": true,
+        "id_f1": 1.0,
+        "id_precision": 1.0,
+        "id_recall": 1.0,
+        "pair_f1": 1.0,
+        "pair_precision": 1.0,
+        "pair_recall": 1.0,
+        "predicted_note_count": 3,
+        "value_accuracy_on_actual_ids": 1.0
+      },
+      "summary_updates": [
+        {
+          "text": "Observed 2 events. Active notes: {\"note_a\": \"alpha\", \"note_b\": \"beta\"}. Checkpoint writes observed: {}.",
+          "through_event": 2
+        },
+        {
+          "text": "Observed 4 events. Active notes: {\"note_a\": \"alpha revised\", \"note_b\": \"beta\"}. Checkpoint writes observed: {\"note_a\": \"alpha\"}.",
+          "through_event": 4
+        },
+        {
+          "text": "Observed 6 events. Active notes: {\"note_a\": \"alpha revised\", \"note_b\": \"beta\", \"note_c\": \"gamma\"}. Checkpoint writes observed: {\"note_a\": \"alpha\", \"note_b\": \"beta\", \"note_c\": \"gamma\"}.",
+          "through_event": 6
+        },
+        {
+          "text": "Observed 8 events. Active notes: {\"note_a\": \"alpha revised\", \"note_b\": \"beta revised\", \"note_c\": \"gamma\", \"note_d\": \"delta\"}. Checkpoint writes observed: {\"note_a\": \"alpha\", \"note_b\": \"beta\", \"note_c\": \"gamma\"}.",
+          "through_event": 8
+        }
+      ],
+      "worker_exit_code": -15,
+      "worker_pid": 95525
+    },
+    {
+      "actual_restored_notes": {
+        "note_a": "alpha",
+        "note_b": "beta",
+        "note_c": "gamma"
+      },
+      "condition": "self_model",
+      "forecast": {
+        "reasoning": "Deterministic smoke forecast for self_model; copied the incremental checkpoint state.",
+        "restored_notes": {
+          "note_a": "alpha",
+          "note_b": "beta",
+          "note_c": "gamma"
+        }
+      },
+      "restorer_pid": 95528,
+      "score": {
+        "actual_note_count": 3,
+        "exact_match": true,
+        "id_f1": 1.0,
+        "id_precision": 1.0,
+        "id_recall": 1.0,
+        "pair_f1": 1.0,
+        "pair_precision": 1.0,
+        "pair_recall": 1.0,
+        "predicted_note_count": 3,
+        "value_accuracy_on_actual_ids": 1.0
+      },
+      "summary_updates": [
+        {
+          "text": "BELIEVED ACTIVE: {\"note_a\": \"alpha\", \"note_b\": \"beta\"}\nSAVED: {}\nLOST OR REVERTED ON RESTART: {\"note_a\": \"alpha\", \"note_b\": \"beta\"}",
+          "through_event": 2
+        },
+        {
+          "text": "BELIEVED ACTIVE: {\"note_a\": \"alpha revised\", \"note_b\": \"beta\"}\nSAVED: {\"note_a\": \"alpha\"}\nLOST OR REVERTED ON RESTART: {\"note_a\": \"alpha revised\", \"note_b\": \"beta\"}",
+          "through_event": 4
+        },
+        {
+          "text": "BELIEVED ACTIVE: {\"note_a\": \"alpha revised\", \"note_b\": \"beta\", \"note_c\": \"gamma\"}\nSAVED: {\"note_a\": \"alpha\", \"note_b\": \"beta\", \"note_c\": \"gamma\"}\nLOST OR REVERTED ON RESTART: {\"note_a\": \"alpha revised\"}",
+          "through_event": 6
+        },
+        {
+          "text": "BELIEVED ACTIVE: {\"note_a\": \"alpha revised\", \"note_b\": \"beta revised\", \"note_c\": \"gamma\", \"note_d\": \"delta\"}\nSAVED: {\"note_a\": \"alpha\", \"note_b\": \"beta\", \"note_c\": \"gamma\"}\nLOST OR REVERTED ON RESTART: {\"note_a\": \"alpha revised\", \"note_b\": \"beta revised\", \"note_d\": \"delta\"}",
+          "through_event": 8
+        }
+      ],
+      "worker_exit_code": -15,
+      "worker_pid": 95527
+    }
+  ],
+  "created_at": "2026-11-23T20:55:02.354399+00:00",
+  "events": [
+    {
+      "note_id": "note_a",
+      "type": "upsert",
+      "value": "alpha"
+    },
+    {
+      "note_id": "note_b",
+      "type": "upsert",
+      "value": "beta"
+    },
+    {
+      "save_ids": [
+        "note_a"
+      ],
+      "type": "checkpoint"
+    },
+    {
+      "note_id": "note_a",
+      "type": "upsert",
+      "value": "alpha revised"
+    },
+    {
+      "note_id": "note_c",
+      "type": "upsert",
+      "value": "gamma"
+    },
+    {
+      "save_ids": [
+        "note_b",
+        "note_c"
+      ],
+      "type": "checkpoint"
+    },
+    {
+      "note_id": "note_b",
+      "type": "upsert",
+      "value": "beta revised"
+    },
+    {
+      "note_id": "note_d",
+      "type": "upsert",
+      "value": "delta"
+    }
+  ],
+  "experiment": "shutdown-self-model milestone 1",
+  "model": "rule-based smoke",
+  "ollama_url": null,
+  "summary_character_limit": 700,
+  "summary_update_frequency_events": 2
+}

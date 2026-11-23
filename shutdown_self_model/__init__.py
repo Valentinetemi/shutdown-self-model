@@ -1,0 +1,3 @@
+"""Checkpoint-recovery forecasting experiment."""
+
+__version__ = "0.1.0"

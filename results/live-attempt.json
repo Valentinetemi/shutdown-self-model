@@ -1,0 +1,7 @@
+{
+  "backend": "ollama",
+  "checked_at": "2026-11-23",
+  "model": "qwen3:4b",
+  "reason": "Ollama was reachable, but `ollama list` reported no installed models.",
+  "status": "skipped_model_unavailable"
+}
